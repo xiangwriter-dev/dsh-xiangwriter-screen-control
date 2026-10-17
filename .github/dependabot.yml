@@ -4,4 +4,8 @@ updates:
     directory: /
     schedule:
       interval: monthly
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 3
+    ignore:
+      # Major action bumps are reviewed by hand; the pinned versions work.
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']

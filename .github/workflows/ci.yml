@@ -14,9 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # The test runner needs Node 22.8+ for --test-isolation=none; the
-        # plugin runtime itself only needs Node 20.
-        node: [22, 24]
+        node: [20, 22, 24]
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +26,10 @@ jobs:
         run: node scripts/check.mjs
 
       - name: Unit tests
-        run: node --test --test-isolation=none "test/unit/*.test.mjs"
+        # The default isolation spawns one process per file, which is what a
+        # normal CI runner can do; --test-isolation=none is for sandboxed hosts
+        # and only exists on newer Node versions.
+        run: node --test test/unit
 
       - name: Package dry run
         shell: pwsh

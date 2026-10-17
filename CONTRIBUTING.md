@@ -8,12 +8,12 @@ Thanks for helping. This repository is a DeepSeek Harness bundle, so a change is
 git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
 cd dsh-screen-control
 node scripts/check.mjs
-node --test --test-isolation=none "test/unit/*.test.mjs"
+node --test test/unit
 ```
 
 No `npm install` is needed: the bundle declares no runtime dependencies on purpose (see [Architecture](docs/architecture.md)).
 
-The tests run with `--test-isolation=none` so they work in hosts that forbid child processes; that flag requires Node 22.8 or newer (the plugin runtime itself only needs Node 20).
+If your shell forbids child processes (a confined agent host, for example), run `npm run test:sandboxed` instead — it uses `--test-isolation=none`, which needs a current Node (24.x).
 
 ## Manual testing
 
