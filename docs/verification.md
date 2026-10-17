@@ -51,6 +51,14 @@ Install result:
 - Release `v0.1.1` published with the asset `dsh-xiangwriter-screen-control.tgz` (42,717 bytes); `releases/latest/download/dsh-xiangwriter-screen-control.tgz` returns HTTP 200.
 - The updated `market/index.json` was parsed by the official `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`: name `dsh-xiangwriter-screen-control`, version `0.1.1`, install spec `git+https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git#c733f74624536d5d07ebb3f7cf7ba2ee6261a895`. The raw index URL serves that document (HTTP 200).
 
+## Repository rename (0.1.2)
+
+- The GitHub repository was renamed to `xiangwriter-dev/dsh-xiangwriter-screen-control`. The old repository page and the old raw index URL still answered in a HEAD check (HTTP 200); GitHub also redirects the old web URLs. All manifest, badge, clone/install, market and awesome-entry URLs were rewritten to the new name.
+- Release `v0.1.2` was published with `dsh-xiangwriter-screen-control.tgz`; `https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz` returns HTTP 200.
+- The 0.1.2 index was parsed by the official `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`: name `dsh-xiangwriter-screen-control`, version `0.1.2`, install spec `git+https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git#83b79a058836bddea6600fab929682d3c7cd0790`, icon resolved on the new raw path.
+- Reinstalled in the live profile: `remove_bundle` → `install_bundle D:\DEEPSEEK\dsh-screen-control` returned `"bundle": "dsh-xiangwriter-screen-control", "version": "0.1.2", "application": "applied", "warnings": []`; `screen_windows {action: "list"}` returned live windows afterwards.
+- The local checkout directory is still `D:\DEEPSEEK\dsh-screen-control`; only the GitHub repository and the URLs changed.
+
 | Check | Command | Result |
 | --- | --- | --- |
 | Tools registered | tool list after install | `screen_capture`, `screen_pointer`, `screen_keyboard`, `screen_windows`, `screen_ui`, `screen_wait` |
