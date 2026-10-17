@@ -14,7 +14,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [20, 22]
+        # The test runner needs Node 22.8+ for --test-isolation=none; the
+        # plugin runtime itself only needs Node 20.
+        node: [22, 24]
     steps:
       - uses: actions/checkout@v4
 

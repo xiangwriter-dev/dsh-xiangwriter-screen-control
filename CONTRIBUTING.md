@@ -13,6 +13,8 @@ node --test --test-isolation=none "test/unit/*.test.mjs"
 
 No `npm install` is needed: the bundle declares no runtime dependencies on purpose (see [Architecture](docs/architecture.md)).
 
+The tests run with `--test-isolation=none` so they work in hosts that forbid child processes; that flag requires Node 22.8 or newer (the plugin runtime itself only needs Node 20).
+
 ## Manual testing
 
 Install the checkout as a bundle into a test profile, then exercise the tools from a chat:
