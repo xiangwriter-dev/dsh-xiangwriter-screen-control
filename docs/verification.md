@@ -58,6 +58,14 @@ Install result:
 
 Evidence images were returned to the model as real image blocks, which also verifies the attachment path end to end.
 
+## Reload and window targeting
+
+A live defect was found during this verification and fixed in the same change:
+
+- `screen_capture { window: "…" }` matched nothing and silently captured the foreground window, because the engine resolved windows only from a `title` argument while the capture tool sends `window`. `Get-WindowByRef` now accepts both.
+- Reloading the running plugin (**Settings → Plugins** toggle, or `set_plugin enabled: false` followed by `true`) applies engine fixes: after the toggle, `screen_capture { window: "…" }` captured the matched window's rectangle and an unmatched title returned `E_NOT_FOUND: no visible window title contains 'no-such-window-xyz-123'`.
+- The toggle itself exercised the dispose path: the disabled row stopped the worker and removed the tools, and enabling it re-registered all six tools and the system-prompt section (`application: applied` both ways, no warnings).
+
 ## What the automated e2e covers
 
 `test/e2e/tools.test.mjs` (with `DSH_SCREEN_E2E=1`) drives the real engine through all six tools: capture + PNG signature, cursor move and read-back, image→screen coordinate mapping, window enumeration, UIA tree, wait, and an invalid chord that must be rejected before reaching the engine.
@@ -68,7 +76,7 @@ Inside an externally sandboxed shell (the harness's own command sandbox) the cur
 
 These need a human or a disposable machine and are documented rather than claimed:
 
-- The approval card itself: in the development session the first input call was granted without an observable prompt (the session's approval policy answered it), so the rejection path and the card rendering still need a fresh session with `inputPolicy: "ask"`.
+- The approval card itself: in the development session the first input call was granted without an observable prompt (the session's approval policy answered it), so the rejection path and the card rendering still need a fresh session with `inputPolicy: "ask"`. Later in the same session the approval policy was switched to `never` and input kept working because the per-session grant was already cached — a fresh session under `never` should be expected to reject input.
 - The `Ctrl+Alt+Esc` failsafe: requires holding the chord while an input call happens.
 - Elevated (administrator) target windows: expect `E_UIPI`.
 - A locked workstation (secure desktop): expect `E_LOCKED`.

@@ -569,8 +569,10 @@ function Get-Info {
 
 function Get-WindowByRef($params) {
   if ($params.hwnd) { return [IntPtr][long]$params.hwnd }
-  if ($params.title) {
-    $needle = [string]$params.title
+  $needle = ''
+  if ($params.title) { $needle = [string]$params.title }
+  elseif ($params.window) { $needle = [string]$params.window }
+  if ($needle) {
     $wins = [ScreenCtl]::ListWindows()
     foreach ($w in $wins) {
       if ($w.Title.IndexOf($needle, [System.StringComparison]::OrdinalIgnoreCase) -ge 0) { return [IntPtr][long]$w.Hwnd }
