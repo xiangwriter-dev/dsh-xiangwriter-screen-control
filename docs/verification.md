@@ -11,7 +11,7 @@ This document records what was actually exercised on the development machine and
 | Desktop session | 79, interactive, single 2560×1600 monitor at 125% scaling (DPI 120) |
 | Node | v24.18.0 |
 | DeepSeek Harness | 0.2.1-rc.2, profile `desktop` |
-| Plugin | `dsh-screen-control` 0.1.0, installed from the local checkout |
+| Plugin | `dsh-xiangwriter-screen-control` 0.1.1, installed from the local checkout (the 0.1.0 evidence below was collected under the previous package name, `dsh-screen-control`) |
 
 ## Static and unit checks
 
@@ -43,6 +43,13 @@ Install result:
 { "stage": "enable", "target": "dsh-screen-control", "application": "applied",
   "warnings": [], "bundle": "dsh-screen-control", "version": "0.1.0" }
 ```
+
+## Rename to `dsh-xiangwriter-screen-control` (0.1.1)
+
+- The package, patch row module, market index entry, release asset, temp directories and documentation were renamed; the bundle row id (`screen-control`) and all six tool names were kept so sessions keep the same tools.
+- Reinstalled in the live profile: `remove_bundle dsh-screen-control` → `install_bundle D:\DEEPSEEK\dsh-screen-control` returned `"bundle": "dsh-xiangwriter-screen-control", "version": "0.1.1", "application": "applied", "warnings": []`. The six tools and the system-prompt section came back immediately, and `screen_windows {action: "list"}` returned live windows afterwards.
+- Release `v0.1.1` published with the asset `dsh-xiangwriter-screen-control.tgz` (42,717 bytes); `releases/latest/download/dsh-xiangwriter-screen-control.tgz` returns HTTP 200.
+- The updated `market/index.json` was parsed by the official `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`: name `dsh-xiangwriter-screen-control`, version `0.1.1`, install spec `git+https://github.com/xiangwriter-dev/dsh-screen-control.git#c733f74624536d5d07ebb3f7cf7ba2ee6261a895`. The raw index URL serves that document (HTTP 200).
 
 | Check | Command | Result |
 | --- | --- | --- |
