@@ -49,7 +49,7 @@ Install result:
 - The package, patch row module, market index entry, release asset, temp directories and documentation were renamed; the bundle row id (`screen-control`) and all six tool names were kept so sessions keep the same tools.
 - Reinstalled in the live profile: `remove_bundle dsh-screen-control` → `install_bundle D:\DEEPSEEK\dsh-screen-control` returned `"bundle": "dsh-xiangwriter-screen-control", "version": "0.1.1", "application": "applied", "warnings": []`. The six tools and the system-prompt section came back immediately, and `screen_windows {action: "list"}` returned live windows afterwards.
 - Release `v0.1.1` published with the asset `dsh-xiangwriter-screen-control.tgz` (42,717 bytes); `releases/latest/download/dsh-xiangwriter-screen-control.tgz` returns HTTP 200.
-- The updated `market/index.json` was parsed by the official `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`: name `dsh-xiangwriter-screen-control`, version `0.1.1`, install spec `git+https://github.com/xiangwriter-dev/dsh-screen-control.git#c733f74624536d5d07ebb3f7cf7ba2ee6261a895`. The raw index URL serves that document (HTTP 200).
+- The updated `market/index.json` was parsed by the official `@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`: name `dsh-xiangwriter-screen-control`, version `0.1.1`, install spec `git+https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git#c733f74624536d5d07ebb3f7cf7ba2ee6261a895`. The raw index URL serves that document (HTTP 200).
 
 | Check | Command | Result |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ A live defect was found during this verification and fixed in the same change:
 
 ## Plugin market index
 
-- `market/index.json` was parsed by the **official** validator (`@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`, installed from npm) against the public index URL: accepted. It produced the install argument `git+https://github.com/xiangwriter-dev/dsh-screen-control.git#5d34992e271ac653952d96481d8c52a7fdc55d21` and resolved the icon to `https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/icon.svg`.
+- `market/index.json` was parsed by the **official** validator (`@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`, installed from npm) against the public index URL: accepted. It produced the install argument `git+https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git#5d34992e271ac653952d96481d8c52a7fdc55d21` and resolved the icon to `https://raw.githubusercontent.com/xiangwriter-dev/dsh-xiangwriter-screen-control/main/icon.svg`.
 - The published index URL returns HTTP 200 with byte-identical content (sha256 `EE151D48A0FB9CB922CECE3B755D6BFEE2F7185746EFB7C4294B885A987CB8DE`); the icon returns HTTP 200 `image/svg+xml`.
 - Not exercised live: enabling the experimental market bundle and clicking through Discover, because that changes this profile's UI. The parser and URL checks above are the evidence; the UI path is documented in [market.md](market.md).
 

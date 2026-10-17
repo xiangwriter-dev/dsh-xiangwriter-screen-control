@@ -1,7 +1,7 @@
-url: https://github.com/xiangwriter-dev/dsh-screen-control
-name: xiangwriter-dev/dsh-screen-control
+url: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control
+name: xiangwriter-dev/dsh-xiangwriter-screen-control
 category: tools
 description:
   en: 'Windows screen control for DeepSeek Harness: screenshot, mouse and keyboard input, UI Automation tree and window focus through six screen_* tools on a stock Windows PowerShell 5.1 engine, with approval gating and a Ctrl+Alt+Esc emergency stop.'
   zh: '面向 DeepSeek Harness 的 Windows 屏幕控制：截屏、鼠标键盘输入、UI Automation 控件树与窗口聚焦，六个 screen_* 工具由系统自带 PowerShell 5.1 引擎驱动，带输入审批与 Ctrl+Alt+Esc 紧急停止。'
-tarball: https://github.com/xiangwriter-dev/dsh-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz
+tarball: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz

@@ -1,6 +1,6 @@
 # dsh-xiangwriter-screen-control
 
-[![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
+[![CI](https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4.svg)](#requirements)
 [![DSH plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4F7CFF.svg)](#install)
@@ -34,14 +34,14 @@ Like Codex's computer-use plugin, but built for DSH on Windows with **no depende
 ### From GitHub (recommended)
 
 ```sh
-dsh plugin add github:xiangwriter-dev/dsh-screen-control
+dsh plugin add github:xiangwriter-dev/dsh-xiangwriter-screen-control
 ```
 
 ### From a local checkout
 
 ```sh
-git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
-dsh plugin add /absolute/path/to/dsh-screen-control
+git clone https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git
+dsh plugin add /absolute/path/to/dsh-xiangwriter-screen-control
 ```
 
 In the desktop app, the equivalent is **Settings → Plugins → Install bundle** with the directory as the target.
@@ -49,7 +49,7 @@ In the desktop app, the equivalent is **Settings → Plugins → Install bundle*
 ### From a release tarball
 
 ```sh
-dsh plugin add https://github.com/xiangwriter-dev/dsh-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz
+dsh plugin add https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz
 ```
 
 After installing, the tools appear on the next turn. The plugin row is called **Screen Control** in Settings → Plugins.
@@ -59,7 +59,7 @@ After installing, the tools appear on the next turn. The plugin row is called **
 DSH 0.2.1-rc.2 ships the plugin market as an **experimental bundle that is disabled by default**, and it has no built-in index: the Discover tab reads the index URLs you add. Enable the bundle once (Settings → Plugins → *Plugin market*; the package is `@deepseek-ai/dsh-experimental-plugin-market-bundle`), then add this index:
 
 ```
-https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json
+https://raw.githubusercontent.com/xiangwriter-dev/dsh-xiangwriter-screen-control/main/market/index.json
 ```
 
 The index uses the harness's plugin market format 1 and pins the `v0.1.0` commit, so installing from Discover gets exactly the released code. See [docs/market.md](docs/market.md) for the entry, the update procedure, and the exact validation rules.

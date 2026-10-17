@@ -1,6 +1,6 @@
 # dsh-xiangwriter-screen-control
 
-[![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
+[![CI](https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4.svg)](#环境要求)
 [![DSH plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4F7CFF.svg)](#安装)
@@ -32,14 +32,14 @@
 ## 安装
 
 ```sh
-dsh plugin add github:xiangwriter-dev/dsh-screen-control
+dsh plugin add github:xiangwriter-dev/dsh-xiangwriter-screen-control
 ```
 
 本地目录安装：
 
 ```sh
-git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
-dsh plugin add /绝对路径/dsh-screen-control
+git clone https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git
+dsh plugin add /绝对路径/dsh-xiangwriter-screen-control
 ```
 
 桌面端的等价操作是「设置 → 插件 → 安装包」，目标是仓库目录。安装后，插件行显示为 **屏幕控制**。
@@ -49,7 +49,7 @@ dsh plugin add /绝对路径/dsh-screen-control
 DSH 0.2.1-rc.2 的插件市场是**默认关闭的实验 bundle**，且没有内置索引：Discover 页读取的是你自己添加的索引 URL。启用一次（设置 → 插件 → *插件市场*，包名 `@deepseek-ai/dsh-experimental-plugin-market-bundle`），然后添加这个索引：
 
 ```
-https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json
+https://raw.githubusercontent.com/xiangwriter-dev/dsh-xiangwriter-screen-control/main/market/index.json
 ```
 
 索引使用 Harness 的插件市场 format 1，并把版本钉在 `v0.1.0` 的 commit 上，所以从 Discover 安装得到的正是已发布的代码。条目、更新流程与校验规则见 [docs/market.md](docs/market.md)。

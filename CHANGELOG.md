@@ -4,6 +4,12 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-10-17
+
+### Changed
+
+- The GitHub repository was renamed to **`xiangwriter-dev/dsh-xiangwriter-screen-control`** (GitHub redirects the old URL). Manifest links, badges, clone/install commands, the market index URL and the awesome-dsh-plugin entry now use the new repository. The package name, bundle row id and the six tool names are unchanged.
+
 ## [0.1.1] - 2026-10-17
 
 ### Changed
@@ -25,6 +31,7 @@ All notable changes to this project are documented here. The format follows [Kee
 - Image-capable route detection and durable image attachments; text-only routes receive the file path and metadata.
 - Locale metadata (English, Chinese), icon, bundle patch, CI, release workflow and an awesome-dsh-plugin entry generator.
 
-[Unreleased]: https://github.com/xiangwriter-dev/dsh-screen-control/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/xiangwriter-dev/dsh-screen-control/releases/tag/v0.1.1
-[0.1.0]: https://github.com/xiangwriter-dev/dsh-screen-control/releases/tag/v0.1.0
+[Unreleased]: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/tag/v0.1.2
+[0.1.1]: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/tag/v0.1.1
+[0.1.0]: https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/releases/tag/v0.1.0

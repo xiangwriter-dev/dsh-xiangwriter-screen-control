@@ -31,9 +31,9 @@
       },
       "icon": "../icon.svg",
       "author": "xiangwriter-dev",
-      "homepage": "https://github.com/xiangwriter-dev/dsh-screen-control",
+      "homepage": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control",
       "repository": {
-        "url": "https://github.com/xiangwriter-dev/dsh-screen-control"
+        "url": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control"
       },
       "metadata": {
         "category": "tools",
@@ -45,7 +45,7 @@
           "publishTimestamp": 1792259662,
           "source": {
             "type": "git",
-            "url": "https://github.com/xiangwriter-dev/dsh-screen-control",
+            "url": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control",
             "commit": "c733f74624536d5d07ebb3f7cf7ba2ee6261a895"
           }
         }

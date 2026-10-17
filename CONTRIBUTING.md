@@ -5,8 +5,8 @@ Thanks for helping. This repository is a DeepSeek Harness bundle, so a change is
 ## Setup
 
 ```sh
-git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
-cd dsh-screen-control
+git clone https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git
+cd dsh-xiangwriter-screen-control
 node scripts/check.mjs
 node scripts/run-tests.mjs
 ```
@@ -20,7 +20,7 @@ If your shell forbids child processes (a confined agent host, for example), run 
 Install the checkout as a bundle into a test profile, then exercise the tools from a chat:
 
 ```sh
-dsh plugin add /absolute/path/to/dsh-screen-control
+dsh plugin add /absolute/path/to/dsh-xiangwriter-screen-control
 ```
 
 The live e2e suite moves the mouse briefly:

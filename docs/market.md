@@ -39,7 +39,7 @@ default). When it is enabled, the Web UI gains a Discover tab backed by the
           "publishTimestamp": 1792259662,
           "source": {
             "type": "git",
-            "url": "https://github.com/xiangwriter-dev/dsh-screen-control",
+            "url": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control",
             "commit": "c733f74624536d5d07ebb3f7cf7ba2ee6261a895"
           }
         }
@@ -56,7 +56,7 @@ https (raw GitHub is).
 
 1. Settings → Plugins → enable **Plugin market** (the experimental bundle).
 2. Open Discover → add the index URL:
-   `https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json`
+   `https://raw.githubusercontent.com/xiangwriter-dev/dsh-xiangwriter-screen-control/main/market/index.json`
 3. The **Screen Control** entry appears with its icon and description; Install
    runs the pinned git spec through the plugin manager.
 

@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url'
 const root = fileURLToPath(new URL('..', import.meta.url))
 const file = process.argv[2] ?? join(root, 'market', 'index.json')
 const indexUrl =
-  process.argv[3] ?? 'https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json'
+  process.argv[3] ?? 'https://raw.githubusercontent.com/xiangwriter-dev/dsh-xiangwriter-screen-control/main/market/index.json'
 
 const LANGUAGE_ID = /^[a-z]{2,8}(?:-[a-z0-9]{1,8})*$/u
 const PACKAGE_NAME = /^(?:@[a-z0-9][a-z0-9._~-]*\/)?[a-z0-9][a-z0-9._~-]*$/u

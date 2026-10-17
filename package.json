@@ -1,6 +1,6 @@
 {
   "name": "dsh-xiangwriter-screen-control",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Windows screen control for DeepSeek Harness: capture the screen, click, type, inspect UI Automation and manage windows — a Codex-style computer-use toolset with approval gating and an emergency stop.",
   "type": "module",
   "license": "MIT",
@@ -20,11 +20,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiangwriter-dev/dsh-screen-control.git"
+    "url": "git+https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control.git"
   },
-  "homepage": "https://github.com/xiangwriter-dev/dsh-screen-control#readme",
+  "homepage": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control#readme",
   "bugs": {
-    "url": "https://github.com/xiangwriter-dev/dsh-screen-control/issues"
+    "url": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control/issues"
   },
   "exports": {
     ".": "./index.js",
