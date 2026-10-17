@@ -5,7 +5,7 @@ Thanks for helping. This repository is a DeepSeek Harness bundle, so a change is
 ## Setup
 
 ```sh
-git clone https://github.com/OWNER/dsh-screen-control.git
+git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
 cd dsh-screen-control
 node scripts/check.mjs
 node --test --test-isolation=none "test/unit/*.test.mjs"

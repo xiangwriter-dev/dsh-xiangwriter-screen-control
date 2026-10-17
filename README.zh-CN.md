@@ -1,6 +1,6 @@
 # dsh-screen-control
 
-[![CI](https://github.com/OWNER/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/dsh-screen-control/actions/workflows/ci.yml)
+[![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4.svg)](#环境要求)
 [![DSH plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4F7CFF.svg)](#安装)
@@ -32,13 +32,13 @@
 ## 安装
 
 ```sh
-dsh plugin add github:OWNER/dsh-screen-control
+dsh plugin add github:xiangwriter-dev/dsh-screen-control
 ```
 
 本地目录安装：
 
 ```sh
-git clone https://github.com/OWNER/dsh-screen-control.git
+git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
 dsh plugin add /绝对路径/dsh-screen-control
 ```
 
@@ -136,8 +136,8 @@ DSH_SCREEN_E2E=1 node --test --test-isolation=none "test/e2e/*.test.mjs"
 e2e 会驱动真实引擎并短暂移动鼠标，结束后恢复光标；CI 无交互桌面时自动跳过。
 
 ```sh
-node scripts/setup-repo.mjs <你的GitHub用户名>   # 替换 OWNER 占位
-node scripts/make-entry.mjs <你的GitHub用户名>   # 生成 awesome-dsh-plugin 收录条目
+node scripts/setup-repo.mjs <GitHub用户名>   # 仓库迁移时重新指向元数据
+node scripts/make-entry.mjs <GitHub用户名>   # 重新生成 awesome-dsh-plugin 收录条目
 ```
 
 ## 工作原理

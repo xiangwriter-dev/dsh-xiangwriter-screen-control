@@ -1,6 +1,6 @@
 # dsh-screen-control
 
-[![CI](https://github.com/OWNER/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/dsh-screen-control/actions/workflows/ci.yml)
+[![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4.svg)](#requirements)
 [![DSH plugin](https://img.shields.io/badge/DeepSeek%20Harness-plugin-4F7CFF.svg)](#install)
@@ -34,13 +34,13 @@ Like Codex's computer-use plugin, but built for DSH on Windows with **no depende
 ### From GitHub (recommended)
 
 ```sh
-dsh plugin add github:OWNER/dsh-screen-control
+dsh plugin add github:xiangwriter-dev/dsh-screen-control
 ```
 
 ### From a local checkout
 
 ```sh
-git clone https://github.com/OWNER/dsh-screen-control.git
+git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
 dsh plugin add /absolute/path/to/dsh-screen-control
 ```
 
@@ -49,7 +49,7 @@ In the desktop app, the equivalent is **Settings → Plugins → Install bundle*
 ### From a release tarball
 
 ```sh
-dsh plugin add https://github.com/OWNER/dsh-screen-control/releases/latest/download/dsh-screen-control.tgz
+dsh plugin add https://github.com/xiangwriter-dev/dsh-screen-control/releases/latest/download/dsh-screen-control.tgz
 ```
 
 After installing, the tools appear on the next turn. The plugin row is called **Screen Control** in Settings → Plugins.
@@ -150,8 +150,8 @@ DSH_SCREEN_E2E=1 node --test --test-isolation=none "test/e2e/*.test.mjs"
 The e2e suite drives the real engine and briefly moves the mouse; it restores the cursor when it finishes. On CI it is skipped because the runner has no interactive desktop.
 
 ```sh
-node scripts/setup-repo.mjs <your-github-owner>   # replace the OWNER placeholder
-node scripts/make-entry.mjs <your-github-owner>   # regenerate the awesome-dsh-plugin entry
+node scripts/setup-repo.mjs <github-owner>   # re-point metadata if the repo moves
+node scripts/make-entry.mjs <github-owner>   # regenerate the awesome-dsh-plugin entry
 ```
 
 ## How it works

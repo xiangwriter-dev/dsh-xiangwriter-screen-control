@@ -20,11 +20,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/dsh-screen-control.git"
+    "url": "git+https://github.com/xiangwriter-dev/dsh-screen-control.git"
   },
-  "homepage": "https://github.com/OWNER/dsh-screen-control#readme",
+  "homepage": "https://github.com/xiangwriter-dev/dsh-screen-control#readme",
   "bugs": {
-    "url": "https://github.com/OWNER/dsh-screen-control/issues"
+    "url": "https://github.com/xiangwriter-dev/dsh-screen-control/issues"
   },
   "exports": {
     ".": "./index.js",

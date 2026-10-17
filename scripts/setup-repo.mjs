@@ -1,11 +1,14 @@
 #!/usr/bin/env node
 /**
- * Replace the `OWNER` placeholder in GitHub-facing metadata with a real account.
+ * Replace the `OWNER` placeholder in GitHub-facing files with a real account.
  *
  * Usage: node scripts/setup-repo.mjs <github-owner>
+ *
+ * `scripts/` is excluded on purpose: this file contains the literal placeholder
+ * and must not rewrite itself.
  */
-import { readFileSync, writeFileSync } from 'node:fs'
-import { join } from 'node:path'
+import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('..', import.meta.url))
@@ -16,30 +19,40 @@ if (!owner || !/^[A-Za-z0-9-]+$/.test(owner)) {
   process.exit(1)
 }
 
-const targets = ['package.json', 'README.md', 'README.zh-CN.md', 'awesome-plugin-entry.yml']
-const changed = []
-for (const relative of targets) {
-  const path = join(root, relative)
-  let source
-  try {
-    source = readFileSync(path, 'utf8')
-  } catch {
-    continue
+const SKIP_DIRS = new Set(['.git', 'node_modules', 'scripts'])
+const TEXT_FILE = /\.(md|markdown|ya?ml|json)$/
+
+function textFiles(dir, out = []) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const path = join(dir, entry.name)
+    if (entry.isDirectory()) {
+      if (!SKIP_DIRS.has(entry.name)) textFiles(path, out)
+      continue
+    }
+    if (TEXT_FILE.test(entry.name)) out.push(path)
   }
+  return out
+}
+
+const changed = []
+for (const path of textFiles(root)) {
+  const source = readFileSync(path, 'utf8')
   const next = source.split('OWNER').join(owner)
   if (next !== source) {
     writeFileSync(path, next, 'utf8')
-    changed.push(relative)
+    changed.push(relative(root, path).replaceAll('\\', '/'))
   }
 }
 
 if (changed.length === 0) {
   console.log('nothing to rewrite (OWNER placeholder not found)')
 } else {
-  console.log(`rewrote ${changed.join(', ')} for owner "${owner}"`)
+  console.log(`rewrote ${changed.length} file(s) for owner "${owner}":`)
+  for (const file of changed) console.log(`  - ${file}`)
 }
 
-// Sanity: no README links may resolve outside the repository tree.
-const readme = readFileSync(join(root, 'README.md'), 'utf8')
-const badLinks = [...readme.matchAll(/\]\((?!https?:|#|\.\/|docs\/|LICENSE|CONTRIBUTING|CHANGELOG|SECURITY|CODE_OF_CONDUCT)([^)]+)\)/g)]
-if (badLinks.length > 0) console.warn(`warning: ${badLinks.length} relative link(s) in README.md may need checking`)
+const remaining = textFiles(root).filter((path) => readFileSync(path, 'utf8').includes('OWNER'))
+if (remaining.length > 0) {
+  console.error(`warning: OWNER is still present in ${remaining.length} file(s)`)
+  process.exitCode = 1
+}

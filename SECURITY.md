@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Please report privately through GitHub's [security advisories](https://github.com/OWNER/dsh-screen-control/security/advisories/new) rather than a public issue. Include the DeepSeek Harness version, the Windows version, the tool call involved, and what an attacker could achieve.
+Please report privately through GitHub's [security advisories](https://github.com/xiangwriter-dev/dsh-screen-control/security/advisories/new) rather than a public issue. Include the DeepSeek Harness version, the Windows version, the tool call involved, and what an attacker could achieve.
 
 Expect an initial response within a week. This is a volunteer project, so please allow reasonable time before disclosure.
 

@@ -18,5 +18,5 @@ All notable changes to this project are documented here. The format follows [Kee
 - Image-capable route detection and durable image attachments; text-only routes receive the file path and metadata.
 - Locale metadata (English, Chinese), icon, bundle patch, CI, release workflow and an awesome-dsh-plugin entry generator.
 
-[Unreleased]: https://github.com/OWNER/dsh-screen-control/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/OWNER/dsh-screen-control/releases/tag/v0.1.0
+[Unreleased]: https://github.com/xiangwriter-dev/dsh-screen-control/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/xiangwriter-dev/dsh-screen-control/releases/tag/v0.1.0
