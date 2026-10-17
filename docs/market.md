@@ -30,17 +30,17 @@ default). When it is enabled, the Web UI gains a Discover tab backed by the
   "metadata": { "categories": { "tools": { "title": { "en": "Tools", "zh": "工具" } } } },
   "plugins": [
     {
-      "name": "dsh-screen-control",
+      "name": "dsh-xiangwriter-screen-control",
       "icon": "../icon.svg",
       "metadata": { "category": "tools", "keywords": ["computer-use", "windows"] },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1792258554,
+          "version": "0.1.1",
+          "publishTimestamp": 1792259662,
           "source": {
             "type": "git",
             "url": "https://github.com/xiangwriter-dev/dsh-screen-control",
-            "commit": "5d34992e271ac653952d96481d8c52a7fdc55d21"
+            "commit": "c733f74624536d5d07ebb3f7cf7ba2ee6261a895"
           }
         }
       ]

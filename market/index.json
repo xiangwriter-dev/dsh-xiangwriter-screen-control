@@ -41,12 +41,12 @@
       },
       "versions": [
         {
-          "version": "0.1.0",
-          "publishTimestamp": 1792258554,
+          "version": "0.1.1",
+          "publishTimestamp": 1792259662,
           "source": {
             "type": "git",
             "url": "https://github.com/xiangwriter-dev/dsh-screen-control",
-            "commit": "5d34992e271ac653952d96481d8c52a7fdc55d21"
+            "commit": "c733f74624536d5d07ebb3f7cf7ba2ee6261a895"
           }
         }
       ]
