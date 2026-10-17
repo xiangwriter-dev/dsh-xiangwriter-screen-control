@@ -18,7 +18,7 @@ jobs:
         # plugin runtime itself only needs Node 20.
         node: [22, 24]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v4
         with:
