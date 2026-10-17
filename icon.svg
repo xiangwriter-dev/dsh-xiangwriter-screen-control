@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Screen Control">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5B8CFF"/>
+      <stop offset="1" stop-color="#2F4FE0"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#g)"/>
+  <rect x="26" y="30" width="76" height="50" rx="6" fill="#0E1A3A" opacity="0.92"/>
+  <rect x="33" y="37" width="62" height="36" rx="3" fill="#9DB6FF" opacity="0.55"/>
+  <rect x="54" y="80" width="20" height="7" rx="2" fill="#0E1A3A" opacity="0.92"/>
+  <rect x="42" y="87" width="44" height="7" rx="3.5" fill="#0E1A3A" opacity="0.92"/>
+  <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.95">
+    <path d="M64 41v14"/>
+    <path d="M57 48h14"/>
+  </g>
+  <path d="M78 72l14 22-6 1.5-4.5-7-3 8.5-5.5-2.5 3.5-8.5-7.5 0z" fill="#FFFFFF" stroke="#0E1A3A" stroke-width="2" stroke-linejoin="round"/>
+</svg>

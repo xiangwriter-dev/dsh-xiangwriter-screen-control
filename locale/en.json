@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Screen Control",
+    "description": "Drive this Windows desktop from the agent: screen capture, mouse and keyboard input, the UI Automation tree, and window management, with an approval gate and an emergency stop."
+  }
+}

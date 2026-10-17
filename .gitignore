@@ -1,0 +1,9 @@
+node_modules/
+coverage/
+.tmp/
+.dsh-screen/
+*.log
+*.tgz
+.DS_Store
+Thumbs.db
+docs/screenshots/local-*.png

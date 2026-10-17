@@ -1,0 +1,13 @@
+- insert:
+    - id: screen-control
+      name: dsh-screen-control
+      config:
+        inputPolicy: ask
+        capture:
+          maxWidth: 1600
+          format: png
+        failsafe:
+          enabled: true
+          hotkey: ctrl+alt+esc
+        bridge:
+          timeoutMs: 15000

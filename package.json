@@ -1,0 +1,62 @@
+{
+  "name": "dsh-screen-control",
+  "version": "0.1.0",
+  "description": "Windows screen control for DeepSeek Harness: capture the screen, click, type, inspect UI Automation and manage windows — a Codex-style computer-use toolset with approval gating and an emergency stop.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "dsh-screen-control contributors"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "computer-use",
+    "screen-capture",
+    "ui-automation",
+    "windows",
+    "automation",
+    "agent-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/dsh-screen-control.git"
+  },
+  "homepage": "https://github.com/OWNER/dsh-screen-control#readme",
+  "bugs": {
+    "url": "https://github.com/OWNER/dsh-screen-control/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "scripts",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test --test-isolation=none \"test/unit/*.test.mjs\"",
+    "test:e2e": "node --test --test-isolation=none \"test/e2e/*.test.mjs\"",
+    "check": "node scripts/check.mjs",
+    "entry": "node scripts/make-entry.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

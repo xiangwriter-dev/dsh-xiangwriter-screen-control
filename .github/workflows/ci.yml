@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Static check
+        run: node scripts/check.mjs
+
+      - name: Unit tests
+        run: node --test --test-isolation=none "test/unit/*.test.mjs"
+
+      - name: Package dry run
+        shell: pwsh
+        run: npm.cmd pack --dry-run
+
+      - name: PowerShell syntax
+        shell: pwsh
+        run: |
+          $tokens = $null
+          $errors = $null
+          [System.Management.Automation.Language.Parser]::ParseFile(
+            (Resolve-Path "scripts/screen-control.ps1"),
+            [ref]$tokens,
+            [ref]$errors
+          ) | Out-Null
+          if ($errors.Count -gt 0) {
+            $errors | ForEach-Object { Write-Error $_.Message }
+            exit 1
+          }
+
+      - name: Engine compiles native bindings
+        shell: pwsh
+        run: |
+          $output = & powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass `
+            -File scripts/screen-control.ps1 -CompileOnly
+          $output
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if ($output -notmatch '"ok":true') { throw "engine did not report ok" }

@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Static check and unit tests
+        run: |
+          node scripts/check.mjs
+          node --test --test-isolation=none "test/unit/*.test.mjs"
+
+      - name: Pack the bundle
+        shell: pwsh
+        run: |
+          npm.cmd pack
+          $tgz = Get-ChildItem -Filter *.tgz | Select-Object -First 1
+          if (-not $tgz) { throw "npm pack produced no tarball" }
+          # Keep the asset name version-free so releases/latest/download/ never rots.
+          Move-Item -LiteralPath $tgz.FullName -Destination dsh-screen-control.tgz -Force
+
+      - name: Upload the release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dsh-screen-control.tgz
+          generate_release_notes: true

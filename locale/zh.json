@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "屏幕控制",
+    "description": "让 Agent 操作本机 Windows 桌面：截屏、鼠标与键盘输入、UI Automation 控件树与窗口管理，带输入审批与紧急停止。"
+  }
+}
