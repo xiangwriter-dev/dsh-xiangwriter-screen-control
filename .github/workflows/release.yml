@@ -32,7 +32,7 @@ jobs:
           Move-Item -LiteralPath $tgz.FullName -Destination dsh-screen-control.tgz -Force
 
       - name: Upload the release asset
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: dsh-screen-control.tgz
           generate_release_notes: true
