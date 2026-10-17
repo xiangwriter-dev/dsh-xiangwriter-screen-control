@@ -66,6 +66,12 @@ A live defect was found during this verification and fixed in the same change:
 - Reloading the running plugin (**Settings → Plugins** toggle, or `set_plugin enabled: false` followed by `true`) applies engine fixes: after the toggle, `screen_capture { window: "…" }` captured the matched window's rectangle and an unmatched title returned `E_NOT_FOUND: no visible window title contains 'no-such-window-xyz-123'`.
 - The toggle itself exercised the dispose path: the disabled row stopped the worker and removed the tools, and enabling it re-registered all six tools and the system-prompt section (`application: applied` both ways, no warnings).
 
+## Plugin market index
+
+- `market/index.json` was parsed by the **official** validator (`@deepseek-ai/dsh-plugin-market-index@0.2.1-rc.2`, installed from npm) against the public index URL: accepted. It produced the install argument `git+https://github.com/xiangwriter-dev/dsh-screen-control.git#5d34992e271ac653952d96481d8c52a7fdc55d21` and resolved the icon to `https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/icon.svg`.
+- The published index URL returns HTTP 200 with byte-identical content (sha256 `EE151D48A0FB9CB922CECE3B755D6BFEE2F7185746EFB7C4294B885A987CB8DE`); the icon returns HTTP 200 `image/svg+xml`.
+- Not exercised live: enabling the experimental market bundle and clicking through Discover, because that changes this profile's UI. The parser and URL checks above are the evidence; the UI path is documented in [market.md](market.md).
+
 ## What the automated e2e covers
 
 `test/e2e/tools.test.mjs` (with `DSH_SCREEN_E2E=1`) drives the real engine through all six tools: capture + PNG signature, cursor move and read-back, image→screen coordinate mapping, window enumeration, UIA tree, wait, and an invalid chord that must be rejected before reaching the engine.
