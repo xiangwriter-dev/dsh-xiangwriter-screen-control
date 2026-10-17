@@ -49,9 +49,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test test/unit",
-    "test:sandboxed": "node --test --test-isolation=none \"test/unit/*.test.mjs\"",
-    "test:e2e": "node --test --test-isolation=none \"test/e2e/*.test.mjs\"",
+    "test": "node scripts/run-tests.mjs",
+    "test:sandboxed": "node scripts/run-tests.mjs --sandboxed",
+    "test:e2e": "node scripts/run-tests.mjs e2e --sandboxed",
     "check": "node scripts/check.mjs",
     "entry": "node scripts/make-entry.mjs"
   },

@@ -128,13 +128,13 @@ bridge:
 ## 开发
 
 ```sh
-node scripts/check.mjs          # 导入所有模块并校验资源，不启动子进程
-node --test test/unit
-node --test --test-isolation=none "test/unit/*.test.mjs"   # 禁止子进程的宿主环境
-DSH_SCREEN_E2E=1 node --test --test-isolation=none "test/e2e/*.test.mjs"
+node scripts/check.mjs                  # 导入所有模块并校验资源，不启动子进程
+node scripts/run-tests.mjs              # 单元测试
+node scripts/run-tests.mjs --sandboxed  # 单进程运行（受限宿主）
+DSH_SCREEN_E2E=1 node scripts/run-tests.mjs e2e --sandboxed
 ```
 
-`--test-isolation=none` 用于避免每个测试文件起一个子进程（受限宿主不允许），需要较新的 Node（24.x）。插件运行时本身只要求 Node 20。
+`run-tests.mjs` 自己枚举测试文件，不依赖 shell 通配符或目录参数；`--sandboxed` 避免每个测试文件起一个子进程（受限宿主不允许）。
 
 e2e 会驱动真实引擎并短暂移动鼠标，结束后恢复光标；CI 无交互桌面时自动跳过。
 

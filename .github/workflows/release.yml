@@ -20,7 +20,7 @@ jobs:
       - name: Static check and unit tests
         run: |
           node scripts/check.mjs
-          node --test test/unit
+          node scripts/run-tests.mjs
 
       - name: Pack the bundle
         shell: pwsh

@@ -19,7 +19,7 @@ This document records what was actually exercised on the development machine and
 $ node scripts/check.mjs
 check: 19 modules, manifest and resources look consistent
 
-$ node --test test/unit          # or the --test-isolation=none variant in a confined host
+$ node scripts/run-tests.mjs     # --sandboxed in a confined host
 tests 25, pass 25
 ```
 

@@ -8,7 +8,7 @@ Thanks for helping. This repository is a DeepSeek Harness bundle, so a change is
 git clone https://github.com/xiangwriter-dev/dsh-screen-control.git
 cd dsh-screen-control
 node scripts/check.mjs
-node --test test/unit
+node scripts/run-tests.mjs
 ```
 
 No `npm install` is needed: the bundle declares no runtime dependencies on purpose (see [Architecture](docs/architecture.md)).

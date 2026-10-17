@@ -142,13 +142,13 @@ bridge:
 ## Development
 
 ```sh
-node scripts/check.mjs          # imports every module and validates resources (no child process)
-node --test test/unit
-node --test --test-isolation=none "test/unit/*.test.mjs"   # host that forbids child processes
-DSH_SCREEN_E2E=1 node --test --test-isolation=none "test/e2e/*.test.mjs"
+node scripts/check.mjs                  # imports every module and validates resources (no child process)
+node scripts/run-tests.mjs              # unit tests
+node scripts/run-tests.mjs --sandboxed  # unit tests in one process (confined host)
+DSH_SCREEN_E2E=1 node scripts/run-tests.mjs e2e --sandboxed
 ```
 
-`--test-isolation=none` avoids spawning one process per test file, which confined hosts forbid; it exists on current Node versions (24.x). The plugin runtime itself only needs Node 20.
+`run-tests.mjs` enumerates the test files itself, so it does not depend on shell globs or directory arguments; `--sandboxed` avoids spawning one process per file, which confined hosts forbid.
 
 The e2e suite drives the real engine and briefly moves the mouse; it restores the cursor when it finishes. On CI it is skipped because the runner has no interactive desktop.
 

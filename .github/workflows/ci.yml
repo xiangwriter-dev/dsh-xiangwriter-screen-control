@@ -26,10 +26,7 @@ jobs:
         run: node scripts/check.mjs
 
       - name: Unit tests
-        # The default isolation spawns one process per file, which is what a
-        # normal CI runner can do; --test-isolation=none is for sandboxed hosts
-        # and only exists on newer Node versions.
-        run: node --test test/unit
+        run: node scripts/run-tests.mjs
 
       - name: Package dry run
         shell: pwsh
