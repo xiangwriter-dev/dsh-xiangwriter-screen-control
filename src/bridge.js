@@ -226,7 +226,7 @@ export class ScreenBridge {
 
   async callOnce(op, args, options) {
     const timeoutMs = options.timeoutMs ?? this.config.bridge.timeoutMs
-    const directory = await mkdtemp(join(tmpdir(), 'dsh-screen-control-'))
+    const directory = await mkdtemp(join(tmpdir(), 'dsh-xiangwriter-screen-control-'))
     const requestPath = join(directory, 'request.json')
     const responsePath = join(directory, 'response.json')
     try {

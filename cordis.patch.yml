@@ -1,6 +1,6 @@
 - insert:
     - id: screen-control
-      name: dsh-screen-control
+      name: dsh-xiangwriter-screen-control
       config:
         inputPolicy: ask
         capture:

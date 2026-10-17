@@ -1,4 +1,4 @@
-# dsh-screen-control
+# dsh-xiangwriter-screen-control
 
 [![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -49,7 +49,7 @@ In the desktop app, the equivalent is **Settings → Plugins → Install bundle*
 ### From a release tarball
 
 ```sh
-dsh plugin add https://github.com/xiangwriter-dev/dsh-screen-control/releases/latest/download/dsh-screen-control.tgz
+dsh plugin add https://github.com/xiangwriter-dev/dsh-screen-control/releases/latest/download/dsh-xiangwriter-screen-control.tgz
 ```
 
 After installing, the tools appear on the next turn. The plugin row is called **Screen Control** in Settings → Plugins.

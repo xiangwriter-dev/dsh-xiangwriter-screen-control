@@ -1,5 +1,5 @@
 name: Bug report
-description: Something in dsh-screen-control does not work as documented.
+description: Something in dsh-xiangwriter-screen-control does not work as documented.
 labels: [bug]
 body:
   - type: markdown

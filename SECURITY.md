@@ -8,7 +8,7 @@ Expect an initial response within a week. This is a volunteer project, so please
 
 ## What this plugin can do
 
-dsh-screen-control injects real mouse and keyboard input and captures the screen. Treat it as remote control of the logged-in desktop:
+dsh-xiangwriter-screen-control injects real mouse and keyboard input and captures the screen. Treat it as remote control of the logged-in desktop:
 
 - Any tool call that reaches `screen_pointer` or `screen_keyboard` can act with the user's privileges, including in security-sensitive applications.
 - Screenshots contain everything visible on screen, with no redaction, and are sent to the configured model provider.

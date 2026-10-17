@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-  Screen Control engine for the dsh-screen-control plugin.
+  Screen Control engine for the dsh-xiangwriter-screen-control plugin.
 
 .DESCRIPTION
   A long-lived JSON-lines worker (or a one-shot request runner) that exposes
@@ -633,7 +633,7 @@ function Invoke-Capture($params) {
 
     $path = [string]$params.path
     if (-not $path) {
-      $dir = Join-Path ([System.IO.Path]::GetTempPath()) 'dsh-screen-control\shots'
+      $dir = Join-Path ([System.IO.Path]::GetTempPath()) 'dsh-xiangwriter-screen-control\shots'
       $path = Join-Path $dir ('shot-' + [Guid]::NewGuid().ToString('N') + '.' + (Get-SaveFormat $format).Ext)
     }
     $mime = Save-Bitmap $bitmap $path $format $quality

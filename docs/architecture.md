@@ -70,7 +70,7 @@ The engine also supports `-Once -RequestFile … -ResponseFile …`, used when p
 1. `PrintWindow` with `PW_RENDERFULLCONTENT` for a named window (works while covered); GDI `BitBlt` from the screen DC for regions and the full desktop (`CAPTUREBLT` included so layered windows show up).
 2. Optional cursor crosshair drawn in place.
 3. GDI+ high-quality bicubic downscale to `maxWidth`.
-4. PNG or JPEG (quality) written to `%TEMP%\dsh-screen-control\shots\`.
+4. PNG or JPEG (quality) written to `%TEMP%\dsh-xiangwriter-screen-control\shots\`.
 5. The Node side reads the file, checks `attachments.imageLimits`, and commits it through `saveImage`; the returned reference becomes an `image` content block.
 
 ## Input

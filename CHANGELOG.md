@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-10-17
+
+### Changed
+
+- The package is now published as **`dsh-xiangwriter-screen-control`** (was `dsh-screen-control`). Update any profile dependency, market index, or documentation that names the old package. The bundle row id (`screen-control`) and the six tool names are unchanged.
+- The release asset is now `dsh-xiangwriter-screen-control.tgz`; the installation commands and the market index point at the new name.
+
 ## [0.1.0] - 2026-10-17
 
 ### Added
@@ -18,5 +25,6 @@ All notable changes to this project are documented here. The format follows [Kee
 - Image-capable route detection and durable image attachments; text-only routes receive the file path and metadata.
 - Locale metadata (English, Chinese), icon, bundle patch, CI, release workflow and an awesome-dsh-plugin entry generator.
 
-[Unreleased]: https://github.com/xiangwriter-dev/dsh-screen-control/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/xiangwriter-dev/dsh-screen-control/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/xiangwriter-dev/dsh-screen-control/releases/tag/v0.1.1
 [0.1.0]: https://github.com/xiangwriter-dev/dsh-screen-control/releases/tag/v0.1.0

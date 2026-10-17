@@ -20,7 +20,7 @@
   },
   "plugins": [
     {
-      "name": "dsh-screen-control",
+      "name": "dsh-xiangwriter-screen-control",
       "title": {
         "en": "Screen Control",
         "zh": "屏幕控制"

@@ -1,17 +1,17 @@
 /**
- * dsh-screen-control — Windows screen control for DeepSeek Harness.
+ * dsh-xiangwriter-screen-control — Windows screen control for DeepSeek Harness.
  *
  * Registers screen_capture / screen_pointer / screen_keyboard / screen_windows /
  * screen_ui / screen_wait on top of a long-lived Windows PowerShell engine.
  *
- * @module dsh-screen-control
+ * @module dsh-xiangwriter-screen-control
  */
 import { ScreenBridge } from './src/bridge.js'
 import { normalizeConfig } from './src/config.js'
 import { SCREEN_CONTROL_PROMPT } from './src/system-prompt.js'
 import { registerTools } from './src/tools/index.js'
 
-export const name = 'screen-control'
+export const name = 'dsh-xiangwriter-screen-control'
 export const inject = ['tools']
 
 /**
@@ -42,6 +42,6 @@ export function apply(ctx, config) {
 
   const logger = ctx.logger
   if (typeof logger?.info === 'function') {
-    logger.info(`screen-control: registered ${definitions.length} tools (inputPolicy: ${cfg.inputPolicy})`)
+    logger.info(`dsh-xiangwriter-screen-control: registered ${definitions.length} tools (inputPolicy: ${cfg.inputPolicy})`)
   }
 }

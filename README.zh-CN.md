@@ -1,4 +1,4 @@
-# dsh-screen-control
+# dsh-xiangwriter-screen-control
 
 [![CI](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml/badge.svg)](https://github.com/xiangwriter-dev/dsh-screen-control/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)

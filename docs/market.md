@@ -66,7 +66,7 @@ the index can be removed from the same Discover settings.
 ## Publishing a new version
 
 1. Bump `version` in `package.json`, commit, and tag `v<version>`.
-2. Wait for the Release workflow; it uploads `dsh-screen-control.tgz`.
+2. Wait for the Release workflow; it uploads `dsh-xiangwriter-screen-control.tgz`.
 3. Update `market/index.json`:
    - add (or replace) the `versions[]` entry with the new `version`,
    - set `publishTimestamp` to the current Unix time in seconds,

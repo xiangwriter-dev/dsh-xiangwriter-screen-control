@@ -24,7 +24,7 @@ Returns:
 ```jsonc
 {
   "ok": true,
-  "path": "C:\\Users\\…\\Temp\\dsh-screen-control\\shots\\shot-….png",
+  "path": "C:\\Users\\…\\Temp\\dsh-xiangwriter-screen-control\\shots\\shot-….png",
   "mediaType": "image/png",
   "width": 1600,
   "height": 1000,

@@ -1,11 +1,11 @@
 {
-  "name": "dsh-screen-control",
-  "version": "0.1.0",
+  "name": "dsh-xiangwriter-screen-control",
+  "version": "0.1.1",
   "description": "Windows screen control for DeepSeek Harness: capture the screen, click, type, inspect UI Automation and manage windows — a Codex-style computer-use toolset with approval gating and an emergency stop.",
   "type": "module",
   "license": "MIT",
   "author": {
-    "name": "dsh-screen-control contributors"
+    "name": "dsh-xiangwriter-screen-control contributors"
   },
   "keywords": [
     "dsh",
