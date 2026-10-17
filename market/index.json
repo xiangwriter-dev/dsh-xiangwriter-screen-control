@@ -41,12 +41,12 @@
       },
       "versions": [
         {
-          "version": "0.1.1",
-          "publishTimestamp": 1792259662,
+          "version": "0.1.2",
+          "publishTimestamp": 1792260086,
           "source": {
             "type": "git",
             "url": "https://github.com/xiangwriter-dev/dsh-xiangwriter-screen-control",
-            "commit": "c733f74624536d5d07ebb3f7cf7ba2ee6261a895"
+            "commit": "83b79a058836bddea6600fab929682d3c7cd0790"
           }
         }
       ]
