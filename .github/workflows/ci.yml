@@ -25,6 +25,9 @@ jobs:
       - name: Static check
         run: node scripts/check.mjs
 
+      - name: Market index
+        run: node scripts/check-market-index.mjs
+
       - name: Unit tests
         run: node scripts/run-tests.mjs
 

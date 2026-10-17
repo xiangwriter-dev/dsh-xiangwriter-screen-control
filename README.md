@@ -54,6 +54,16 @@ dsh plugin add https://github.com/xiangwriter-dev/dsh-screen-control/releases/la
 
 After installing, the tools appear on the next turn. The plugin row is called **Screen Control** in Settings → Plugins.
 
+### From the plugin market (Discover)
+
+DSH 0.2.1-rc.2 ships the plugin market as an **experimental bundle that is disabled by default**, and it has no built-in index: the Discover tab reads the index URLs you add. Enable the bundle once (Settings → Plugins → *Plugin market*; the package is `@deepseek-ai/dsh-experimental-plugin-market-bundle`), then add this index:
+
+```
+https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json
+```
+
+The index uses the harness's plugin market format 1 and pins the `v0.1.0` commit, so installing from Discover gets exactly the released code. See [docs/market.md](docs/market.md) for the entry, the update procedure, and the exact validation rules.
+
 ## Quick start
 
 Ask the agent for an outcome, not a keystroke:

@@ -1,0 +1,55 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Xiangwriter DSH plugins",
+    "zh": "xiangwriter 的 DSH 插件"
+  },
+  "description": {
+    "en": "Bundles published by xiangwriter-dev for DeepSeek Harness.",
+    "zh": "xiangwriter-dev 发布给 DeepSeek Harness 的插件合集。"
+  },
+  "metadata": {
+    "categories": {
+      "tools": {
+        "title": {
+          "en": "Tools",
+          "zh": "工具"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-screen-control",
+      "title": {
+        "en": "Screen Control",
+        "zh": "屏幕控制"
+      },
+      "description": {
+        "en": "Windows screen control: capture, mouse and keyboard input, UI Automation trees and window focus as six screen_* tools, with an approval gate and a Ctrl+Alt+Esc emergency stop.",
+        "zh": "Windows 屏幕控制：截屏、鼠标键盘输入、UI Automation 控件树与窗口聚焦，六个 screen_* 工具，带输入审批与 Ctrl+Alt+Esc 紧急停止。"
+      },
+      "icon": "../icon.svg",
+      "author": "xiangwriter-dev",
+      "homepage": "https://github.com/xiangwriter-dev/dsh-screen-control",
+      "repository": {
+        "url": "https://github.com/xiangwriter-dev/dsh-screen-control"
+      },
+      "metadata": {
+        "category": "tools",
+        "keywords": ["computer-use", "screen-capture", "windows", "ui-automation"]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792258554,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/xiangwriter-dev/dsh-screen-control",
+            "commit": "5d34992e271ac653952d96481d8c52a7fdc55d21"
+          }
+        }
+      ]
+    }
+  ]
+}

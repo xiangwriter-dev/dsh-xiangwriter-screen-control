@@ -44,6 +44,16 @@ dsh plugin add /绝对路径/dsh-screen-control
 
 桌面端的等价操作是「设置 → 插件 → 安装包」，目标是仓库目录。安装后，插件行显示为 **屏幕控制**。
 
+### 通过官方插件市场（Discover）安装
+
+DSH 0.2.1-rc.2 的插件市场是**默认关闭的实验 bundle**，且没有内置索引：Discover 页读取的是你自己添加的索引 URL。启用一次（设置 → 插件 → *插件市场*，包名 `@deepseek-ai/dsh-experimental-plugin-market-bundle`），然后添加这个索引：
+
+```
+https://raw.githubusercontent.com/xiangwriter-dev/dsh-screen-control/main/market/index.json
+```
+
+索引使用 Harness 的插件市场 format 1，并把版本钉在 `v0.1.0` 的 commit 上，所以从 Discover 安装得到的正是已发布的代码。条目、更新流程与校验规则见 [docs/market.md](docs/market.md)。
+
 ## 快速上手
 
 对 Agent 说结果，而不是说按键：
